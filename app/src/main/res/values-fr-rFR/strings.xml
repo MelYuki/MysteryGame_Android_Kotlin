@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mystery Game</string>
+    <string name="app_title">Jeu\nMystère !</string>
+    <string name="tv_main_welcome">*** Bienvenue ***</string>
+    <string name="btn_main_play">JOUER</string>
+    <string name="btn_main_restart">RÉINITIALISER</string>
+    <string name="btn_main_replay">REJOUER</string>
+    <string name="et_username">Entrez votre prénom…</string>
+    <string name="welcome_username">Bienvenu %1$s</string>
+    <string name="tv_game_instructions">Veuillez choisir un numéro entre 0 et 10 !</string>
+    <string name="tv_game_condition">Vous avez 3 essais pour trouver le bon numéro !</string>
+    <string name="et_number">Numéro</string>
+    <string name="btn_game_send">Envoyer</string>
+    <string name="tv_game_default_attempts">Essais : 3</string>
+    <string name="tv_game_condition_score">Vous obtiendrez le reste des tentatives sous forme de score !</string>
+    <string name="toast_main_play">Veuillez entrer votre prénom pour jouer!</string>
+    <string name="game_number_is_higher">Le bon numéro est plus GRAND !</string>
+    <string name="game_number_is_lower">Le bon numéro est plus PETIT !</string>
+    <string name="tv_main_result_win">! Félicitations !</string>
+    <string name="tv_main_result_loose">VOUS PERDEZ</string>
+    <string name="tv_game_show_attempts">Essais : %1$s</string>
+    <string name="tv_game_show_attempt">Essai : %1$s</string>
+    <string name="toast_game_error">ERREUR: Le numéro doit être entre 0 et 10!</string>
+</resources>

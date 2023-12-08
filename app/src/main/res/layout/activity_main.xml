@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textColor="@color/white"
+        android:textStyle="italic|bold"
+        android:fontFamily="cursive"
+        android:textSize="46sp"
+        android:gravity="center"
+        android:background="@color/green"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:paddingVertical="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/magenta">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_main_welcome"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="25dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mystery"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_default_result"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_main_default_result"
+                android:textSize="24sp"
+                android:textColor="@color/red"
+                android:gravity="center"
+                android:background="@color/black"
+                android:padding="5dp"
+                android:layout_gravity="center"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/et_main_username"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/et_username"
+                    android:textColorHint="@color/green"
+                    android:textSize="24sp"
+                    android:textColor="@color/green"
+                    android:backgroundTint="@color/green"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_default_score"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_main_default_score"
+                android:textSize="24sp"
+                android:textColor="@color/red"
+                android:gravity="center"
+                android:background="@color/black"
+                android:padding="5dp"
+                android:layout_gravity="center"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_main_play"
+                android:textSize="24sp"
+                android:textColor="@color/green"
+                android:backgroundTint="@color/black"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_replay"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_main_replay"
+                android:textSize="24sp"
+                android:textColor="@color/green"
+                android:backgroundTint="@color/black"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_main_restart"
+                android:textSize="24sp"
+                android:textColor="@color/green"
+                android:backgroundTint="@color/black"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
