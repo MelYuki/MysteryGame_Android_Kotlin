@@ -74,7 +74,6 @@ class GameActivity : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("StringFormatMatches")
     private fun refreshAttempts() {
         binding.tvGameWrong.visibility = View.VISIBLE
         attempt--

@@ -4,7 +4,7 @@
 
     <string name="tv_main_default_result" translatable="false">DEFAULT_RESULT</string>
     <string name="tv_main_default_score" translatable="false">Game : 0 | Score : 0</string>
-    <string name="tv_main_game_score" translatable="false">Game : %1$s | Score : %2$s</string>
+    <string name="tv_main_game_score" translatable="false">Game : %d | Score : %d</string>
     <string name="tv_game_wrong_number" translatable="false">WRONG_NUMBER</string>
 
     <string name="tv_main_welcome">*** Welcome ***</string>
@@ -16,13 +16,13 @@
     <string name="btn_main_replay">REPLAY</string>
     <string name="toast_main_play">Please entre your firstname to play!</string>
 
-    <string name="welcome_username">Welcome %1$s</string>
+    <string name="welcome_username">Welcome %s</string>
     <string name="tv_game_instructions">Please choose a number between 0 and 10 !</string>
     <string name="tv_game_condition">You have 3 attempts to find to right number !</string>
     <string name="tv_game_condition_score">You will get the rest of attempts as score !</string>
     <string name="tv_game_default_attempts">Attempts : 3</string>
-    <string name="tv_game_show_attempts">Attempts : %1$s</string>
-    <string name="tv_game_show_attempt">Attempt : %1$s</string>
+    <string name="tv_game_show_attempts">Attempts : %d</string>
+    <string name="tv_game_show_attempt">Attempt : %d</string>
     <string name="et_number">Number</string>
     <string name="btn_game_send">Send</string>
     <string name="game_number_is_higher">The good number is HIGHER !</string>

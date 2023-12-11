@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    @SuppressLint("StringFormatMatches")
     private fun refreshScore() {
 
         game = intent.getIntExtra(GAME, 0)
@@ -88,7 +87,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun resetGame() {
 
-        binding.tvDefaultScore.text = getString(R.string.tv_main_default_score)
+        binding.tvDefaultScore.text = getString(R.string.tv_main_game_score, game, score)
         hideElements()
     }
 
