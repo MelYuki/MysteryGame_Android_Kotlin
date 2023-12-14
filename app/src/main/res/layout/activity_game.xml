@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Balise du layout global de la View -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +9,12 @@
     android:background="@drawable/mystery"
     tools:context=".GameActivity">
 
+<!--    Message de bonne chance au joueur -->
     <TextView
         android:id="@+id/tv_game_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BIENVENU_USER"
+        android:text="@string/tv_game_goodluck"
         android:textSize="32sp"
         android:textColor="@color/magenta"
         android:background="@color/black"
@@ -21,6 +24,7 @@
         android:padding="10dp"
         />
 
+    <!--    Layout contenant le reste de la View -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,6 +34,7 @@
         android:layout_marginBottom="40dp"
         android:padding="10dp">
 
+<!--        Instructions de jeu -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,6 +44,7 @@
             android:textColor="@color/black"
             android:gravity="center"/>
 
+<!--        Condition de réussite -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,6 +55,7 @@
             android:gravity="center"
             android:layout_marginTop="10dp"/>
 
+<!--        Compte des points -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,6 +66,7 @@
             android:gravity="center"
             android:layout_marginTop="10dp"/>
 
+<!--        Tableau d'affichage des tentatives -->
         <TextView
             android:id="@+id/tv_game_attempts"
             android:layout_width="match_parent"
@@ -71,6 +79,7 @@
             android:layout_marginTop="40dp"
             android:paddingVertical="5dp"/>
 
+<!--        Layout contenant l'input utilisateur et le bouton d'envoie -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,6 +89,7 @@
             android:paddingHorizontal="5dp"
             android:orientation="horizontal">
 
+<!--            Input utilisateur -->
             <EditText
                 android:id="@+id/et_game_user"
                 android:layout_width="0dp"
@@ -93,6 +103,7 @@
                 android:textColor="@color/green"
                 android:backgroundTint="@color/green"/>
 
+<!--            Bouton d'envoie -->
             <Button
                 android:id="@+id/btn_game_send"
                 android:layout_width="wrap_content"
@@ -103,6 +114,7 @@
                 android:backgroundTint="@color/green"/>
         </LinearLayout>
 
+<!--        Indice à l'utilisateur -->
         <TextView
             android:id="@+id/tv_game_wrong"
             android:layout_width="match_parent"

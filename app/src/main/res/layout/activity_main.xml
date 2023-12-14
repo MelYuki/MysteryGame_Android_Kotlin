@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Balise du layout global de la View -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +9,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<!--    Titre de l'app -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,6 +24,7 @@
         android:layout_marginHorizontal="5dp"
         android:paddingVertical="10dp"/>
 
+<!--    Layout contenant le reste de la View -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -28,7 +32,9 @@
         android:orientation="vertical"
         android:background="@color/magenta">
 
+<!--        Message de bienvenu -->
         <TextView
+            android:id="@+id/tv_welcome_msg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tv_main_welcome"
@@ -38,6 +44,7 @@
             android:gravity="center"
             android:layout_marginTop="30dp"/>
 
+<!--        Container de l'Image/Logo de l'app -->
         <androidx.cardview.widget.CardView
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -46,6 +53,7 @@
             app:cardElevation="25dp"
             android:layout_gravity="center">
 
+<!--            Image/Logo -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -53,6 +61,7 @@
                 android:src="@drawable/mystery"/>
         </androidx.cardview.widget.CardView>
 
+<!--        Layout contenant les scores et les boutons de navigation -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,6 +69,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp">
 
+<!--            Résultat: gagné ou perdu -->
             <TextView
                 android:id="@+id/tv_default_result"
                 android:layout_width="250dp"
@@ -72,12 +82,14 @@
                 android:padding="5dp"
                 android:layout_gravity="center"/>
 
+<!--            Balise qui ne contiendra QU'UN SEUL élément -->
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/black"
                 android:layout_gravity="center">
 
+<!--                Input utilisateur -->
                 <EditText
                     android:id="@+id/et_main_username"
                     android:layout_width="250dp"
@@ -91,6 +103,7 @@
                     android:backgroundTint="@color/green"/>
             </FrameLayout>
 
+<!--            Tableau de scores et du nombre de jeu effectué -->
             <TextView
                 android:id="@+id/tv_default_score"
                 android:layout_width="250dp"
@@ -103,11 +116,13 @@
                 android:padding="5dp"
                 android:layout_gravity="center"/>
 
+<!--            Espacement adaptif entre les scores et les boutons affichés -->
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
 
+<!--            Bouton "jouer" -->
             <Button
                 android:id="@+id/btn_play"
                 android:layout_width="250dp"
@@ -118,6 +133,7 @@
                 android:backgroundTint="@color/black"
                 android:layout_gravity="center"/>
 
+<!--            Bouton "rejouer" -->
             <Button
                 android:id="@+id/btn_replay"
                 android:layout_width="250dp"
@@ -128,6 +144,7 @@
                 android:backgroundTint="@color/black"
                 android:layout_gravity="center"/>
 
+<!--            Bouton "réinitialiser" -->
             <Button
                 android:id="@+id/btn_reset"
                 android:layout_width="250dp"

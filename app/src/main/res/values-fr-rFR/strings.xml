@@ -7,7 +7,6 @@
     <string name="btn_main_restart">RÉINITIALISER</string>
     <string name="btn_main_replay">REJOUER</string>
     <string name="et_username">Entrez votre prénom…</string>
-    <string name="welcome_username">Bienvenu %s</string>
     <string name="tv_game_instructions">Veuillez choisir un numéro entre 0 et 10 !</string>
     <string name="tv_game_condition">Vous avez 3 essais pour trouver le bon numéro !</string>
     <string name="et_number">Numéro</string>
@@ -22,4 +21,5 @@
     <string name="tv_game_show_attempts">Essais : %d</string>
     <string name="tv_game_show_attempt">Essai : %d</string>
     <string name="toast_game_error">ERREUR: Le numéro doit être entre 0 et 10!</string>
+    <string name="goodluck_username">Bonne Chance %s</string>
 </resources>
