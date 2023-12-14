@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import be.melyuki.mysterygame.GameActivity.Companion.PREV_GAME
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     // Création des variables globales.
     private var game : Int = 0
     private var score : Int = 0
+    lateinit var prevUser : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,8 @@ class MainActivity : AppCompatActivity() {
         hideElements()
         // Fonction qui rafraichit les scores.
         refreshScore()
+        // Fonction qui affiche le nom du joueur au lieu du "Welcome"
+        refreshWelcome()
 
         // region LISTENER
         // Création des callback (listener) et des actions à produire suite au click des boutons.
@@ -49,10 +53,22 @@ class MainActivity : AppCompatActivity() {
         //endregion
     }
 
+    private fun refreshWelcome() {
+
+        // On crée une variable qui récupère le nom du joueur.
+        prevUser = intent.getStringExtra(PREV_USER).toString()
+        // Log.d("TAG", "onCreate: $prevUser")
+
+        // On gère l'action si on l'a récupéré, avec une condition.
+        if (prevUser != "null")
+            binding.tvWelcomeMsg.text =
+                getString(R.string.tv_main_welcome_user, prevUser.uppercase())
+    }
+
     private fun playAgain() {
 
         // Création d'une variable qui va contenir le nom de l'utilisateur précedent.
-        val prevUser : String = intent.getStringExtra(PREV_USER)!!
+        prevUser = intent.getStringExtra(PREV_USER)!!
 
         // Création de l'intent de navigation, munit des données nécessaires.
         val intent : Intent = Intent(this, GameActivity::class.java).apply {
@@ -66,8 +82,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun resetGame() {
 
-        // Remise à zéro des scores.
-        binding.tvDefaultScore.text = getString(R.string.tv_main_game_score, game, score)
+        // Remise à zéro des scores et du "Welcome".
+        binding.tvDefaultScore.text = getString(R.string.tv_main_game_score, 0, 0)
+        binding.tvWelcomeMsg.text = getString(R.string.tv_main_welcome)
 
         // On cache à nouveau les éléments de départ.
         hideElements()
@@ -92,9 +109,10 @@ class MainActivity : AppCompatActivity() {
             // Création d'un toast alertant l'utilisateur.
             Toast.makeText(this, getString(R.string.toast_main_play), Toast.LENGTH_LONG).show()
         }
-        else
+        else {
             // Lancement de l'intent vers l'autre activité.
             startActivity(intent)
+        }
     }
 
     private fun refreshScore() {

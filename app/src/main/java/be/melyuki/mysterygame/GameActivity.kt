@@ -47,7 +47,7 @@ class GameActivity : AppCompatActivity() {
         username = intent.getStringExtra(USERNAME).toString()
 
         // Affichage du nom du joueur dans l'élément xml dédié.
-        binding.tvGameUsername.text = getString(R.string.welcome_username, username)
+        binding.tvGameUsername.text = getString(R.string.goodluck_username, username.uppercase())
         // On cache la réponse, non désirée pour l'instant, d'après choix du joueur.
         binding.tvGameWrong.visibility = View.GONE
 
