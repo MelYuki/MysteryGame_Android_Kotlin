@@ -149,8 +149,8 @@ class GameActivity : AppCompatActivity() {
 
     private fun cpuRandom() {
         // Méthode JAVA
-        // val rand = Math.random().toInt()
-        // cpu = (rand * 10)
+        // val rand = Math.random()
+        // cpu = (rand * 10).toInt()
 
         // Méthode pure Kotlin
         val rand = (0..10).shuffled().first()
